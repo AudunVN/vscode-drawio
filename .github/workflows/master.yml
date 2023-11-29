@@ -16,7 +16,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "14"
-      - run: yarn install --frozen-lockfile --ignore-engines
+      - run: yarn config set ignore-engines true
+      - run: yarn install --frozen-lockfile
       - run: yarn run-script trigger-prerelease
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
