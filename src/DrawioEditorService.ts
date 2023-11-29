@@ -341,6 +341,7 @@ export class DrawioEditor {
 			"dark",
 			"Kennedy",
 			"sketch",
+			"simple"
 		];
 
 		const originalTheme = this.config.theme;
